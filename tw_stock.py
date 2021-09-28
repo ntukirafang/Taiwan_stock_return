@@ -35,7 +35,7 @@ def stock_crawler(targets):
     
     # Add Percentage of increse and decrease column
     for x in range(len(df.index)):
-        if df['當Present price'].iloc[x] != '-':
+        if df['Present price'].iloc[x] != '-':
             df.iloc[x, [2,3,4,5,6,7,8]] = df.iloc[x, [2,3,4,5,6,7,8]].astype(float)
             df['Percentage of increse and decrease'].iloc[x] = (df['Present price'].iloc[x] - df['Yesterday price'].iloc[x])/df['Yesterday price'].iloc[x] * 100
     
